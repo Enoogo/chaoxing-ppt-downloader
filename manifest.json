@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "学习通课件下载器",
+  "version": "1.1.0",
+  "description": "一键下载学习通(Chaoxing)课程页面里的 PPT/PDF/Word 课件原件，兼容各类 mooc 课程学习页。",
+  "permissions": ["downloads", "storage", "scripting", "tabs"],
+  "host_permissions": [
+    "*://*.chaoxing.com/*",
+    "*://*.cldisk.com/*",
+    "*://*.aichaoxing.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.chaoxing.com/*"],
+      "js": ["content.js"],
+      "all_frames": true,
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "学习通课件下载器"
+  }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>学习通课件下载器</title>
+    <style>
+      body {
+        width: 380px;
+        margin: 0;
+        padding: 12px;
+        font: 13px/1.6 "Microsoft YaHei", "PingFang SC", sans-serif;
+        background: #f7f8fa;
+        color: #222;
+      }
+      h1 {
+        font-size: 15px;
+        margin: 0 0 8px;
+      }
+      #status {
+        color: #666;
+        margin-bottom: 10px;
+        min-height: 20px;
+      }
+      .item {
+        background: #fff;
+        border: 1px solid #e3e6ea;
+        border-radius: 8px;
+        padding: 10px;
+        margin-bottom: 8px;
+      }
+      .name {
+        font-weight: 600;
+        word-break: break-all;
+      }
+      .meta {
+        color: #888;
+        font-size: 12px;
+        margin: 2px 0 8px;
+      }
+      .btns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+      button {
+        border: 1px solid #c9d2dc;
+        background: #fff;
+        border-radius: 6px;
+        padding: 4px 10px;
+        cursor: pointer;
+        font-size: 12px;
+      }
+      button:hover {
+        background: #eef4fb;
+        border-color: #7aa7d9;
+      }
+      button.primary {
+        background: #2b6de5;
+        border-color: #2b6de5;
+        color: #fff;
+      }
+      button.primary:hover {
+        background: #1f5bc7;
+      }
+      button:disabled {
+        opacity: 0.5;
+        cursor: default;
+      }
+      #refresh {
+        margin-bottom: 10px;
+      }
+      .empty {
+        color: #999;
+        text-align: center;
+        padding: 20px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>📚 学习通课件下载器</h1>
+    <div id="status">正在读取当前页面…</div>
+    <button id="refresh">🔄 刷新检测</button>
+    <div id="list"></div>
+    <script src="popup.js"></script>
+  </body>
+</html>
